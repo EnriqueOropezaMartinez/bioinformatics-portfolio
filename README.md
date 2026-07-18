@@ -10,7 +10,7 @@ The purpose of this portfolio is to demonstrate practical experience in computat
 
 ## 🚀 Planned Pipelines
 
-|---------------------------------|
+
 |           Pipeline              |
 |---------------------------------|
 | RNA-seq Differential Expression |
@@ -25,7 +25,7 @@ The purpose of this portfolio is to demonstrate practical experience in computat
 | GWAS                            |
 | Multi-omics Integration         |
 | Nextflow Workflow Collection    |
-|---------------------------------|
+
 
 ## 🛠 Technologies
 
