@@ -1,4 +1,4 @@
-# 🧬 Bioinformatics Portfolio
+# Bioinformatics Portfolio
 
 Welcome to my bioinformatics portfolio.
 
@@ -8,7 +8,7 @@ The purpose of this portfolio is to demonstrate practical experience in computat
 
 ---
 
-## 🚀 Planned Pipelines
+## Planned Pipelines
 
 
 |           Pipeline              |
@@ -27,7 +27,7 @@ The purpose of this portfolio is to demonstrate practical experience in computat
 | Nextflow Workflow Collection    |
 
 
-## 🛠 Technologies
+## Technologies
 
 - R
 - Python
@@ -41,12 +41,12 @@ The purpose of this portfolio is to demonstrate practical experience in computat
 
 ---
 
-## 🎯 Goal
+## Goal
 
 To build a complete collection of professional bioinformatics pipelines using publicly available datasets and reproducible workflows.
 
 ---
 
-## 📅 Project Status
+## Project Status
 
 This portfolio is currently under active development. New pipelines and improvements will be added progressively.
