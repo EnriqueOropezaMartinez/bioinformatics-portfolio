@@ -1,0 +1,14 @@
+# Samples
+samples: config/samples.csv
+
+# Reference genome
+genome: reference/genome.fa
+
+# Gene annotation
+annotation: reference/genes.gtf
+
+# Output directory
+output: results/
+
+# Threads
+threads: 8

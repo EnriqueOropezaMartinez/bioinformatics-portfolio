@@ -1,0 +1,6 @@
+rule all:
+    input:
+        "results/deseq2_results.csv",
+        "figures/pca.pdf",
+        "figures/volcano.pdf",
+        "figures/heatmap.pdf"
