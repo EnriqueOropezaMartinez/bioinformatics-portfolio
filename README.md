@@ -1,25 +1,33 @@
-# Bioinformatics Portfolio
+# 🧬 Bioinformatics Portfolio
 
-Welcome!
+Welcome to my bioinformatics portfolio.
 
-This repository showcases my collection of reproducible bioinformatics pipelines for genomics, transcriptomics, cancer research, and multi-omics data analysis.
+This repository contains a collection of reproducible bioinformatics pipelines developed for genomics, transcriptomics, cancer research, and multi-omics data analysis.
 
-## Pipelines
+The purpose of this portfolio is to demonstrate practical experience in computational biology, reproducible research, and scientific software development.
 
-🚧 RNA-seq Differential Expression
-🚧 Variant Calling
-🚧 Whole Exome Sequencing
-🚧 Whole Genome Sequencing
-🚧 Single-cell RNA-seq
-🚧 ChIP-seq
-🚧 ATAC-seq
-🚧 Metagenomics
-🚧 Proteomics
-🚧 GWAS
-🚧 Multi-omics Integration
-🚧 Nextflow Workflows
+---
 
-## Technologies
+## 🚀 Planned Pipelines
+
+|---------------------------------|
+|           Pipeline              |
+|---------------------------------|
+| RNA-seq Differential Expression |
+| Variant Calling (GATK)          |
+| Whole Exome Sequencing (WES)    |
+| Whole Genome Sequencing (WGS)   |
+| Single-cell RNA-seq             |
+| ChIP-seq                        |
+| ATAC-seq                        |
+| Metagenomics                    |
+| Proteomics                      |
+| GWAS                            |
+| Multi-omics Integration         |
+| Nextflow Workflow Collection    |
+|---------------------------------|
+
+## 🛠 Technologies
 
 - R
 - Python
@@ -31,6 +39,14 @@ This repository showcases my collection of reproducible bioinformatics pipelines
 - Snakemake
 - Nextflow
 
-## Status
+---
 
-🚀 Under active development
+## 🎯 Goal
+
+To build a complete collection of professional bioinformatics pipelines using publicly available datasets and reproducible workflows.
+
+---
+
+## 📅 Project Status
+
+This portfolio is currently under active development. New pipelines and improvements will be added progressively.
