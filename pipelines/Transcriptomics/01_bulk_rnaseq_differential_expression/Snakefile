@@ -1,0 +1,10 @@
+configfile: "config/config.yaml"
+
+
+include: "workflow/rules/01_quality_control.smk"
+include: "workflow/rules/02_trimming.smk"
+include: "workflow/rules/03_alignment.smk"
+include: "workflow/rules/04_quantification.smk"
+include: "workflow/rules/05_differential_expression.smk"
+include: "workflow/rules/06_visualization.smk"
+include: "workflow/rules/07_functional_enrichment.smk"
