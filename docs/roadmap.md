@@ -1,4 +1,4 @@
-# 🧬 Bioinformatics Engineer Roadmap
+# Bioinformatics Engineer Roadmap
 
 This repository documents my journey toward building professional, reproducible bioinformatics pipelines.
 
