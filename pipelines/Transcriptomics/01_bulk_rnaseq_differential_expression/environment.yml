@@ -1,0 +1,35 @@
+name: rnaseq-pipeline
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+
+  # Workflow management
+  - snakemake
+
+  # Quality control
+  - fastqc
+  - multiqc
+
+  # Read preprocessing
+  - trim-galore
+
+  # Alignment
+  - star
+
+  # Quantification
+  - subread
+  - samtools
+
+  # R environment
+  - r-base
+  - r-ggplot2
+  - r-pheatmap
+
+  # Bioconductor
+  - bioconductor-deseq2
+  - bioconductor-clusterprofiler
+  - bioconductor-org.hs.eg.db
