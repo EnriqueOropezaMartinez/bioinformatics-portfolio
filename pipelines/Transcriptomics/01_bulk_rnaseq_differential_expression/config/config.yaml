@@ -1,14 +1,83 @@
+# =============================================================================
+# Project configuration
+# =============================================================================
+
+project:
+  name: "bulk_rnaseq_differential_expression"
+  organism: "homo_sapiens"
+  sequencing_layout: "paired-end"
+
+# =============================================================================
 # Samples
-samples: config/samples.csv
+# =============================================================================
 
+samples: "config/samples.csv"
+
+# =============================================================================
+# Input and output directories
+# =============================================================================
+
+directories:
+  raw_data: "data/raw"
+  results: "results"
+  logs: "logs"
+  benchmarks: "benchmark"
+
+# =============================================================================
 # Reference genome
-genome: reference/genome.fa
+# =============================================================================
 
-# Gene annotation
-annotation: reference/genes.gtf
+reference:
+  genome: "resources/reference/genome.fa"
+  annotation: "resources/reference/annotation.gtf"
+  star_index: "resources/reference/star_index"
+  sjdb_overhang: 149
 
-# Output directory
-output: results/
+# =============================================================================
+# Computational resources
+# =============================================================================
 
-# Threads
-threads: 8
+threads:
+  fastqc: 4
+  multiqc: 2
+  trimming: 6
+  star_index: 24
+  star_alignment: 16
+  samtools: 8
+  featurecounts: 16
+
+# =============================================================================
+# Differential expression
+# =============================================================================
+
+deseq2:
+  design: "condition"
+  reference_condition: "Control"
+  contrast_condition: "Tumor"
+  alpha: 0.05
+  log2fc_threshold: 1.0
+
+# =============================================================================
+# Read quantification
+# =============================================================================
+
+featurecounts:
+  feature_type: "exon"
+  attribute: "gene_id"
+  strand: 0
+
+# =============================================================================
+# Visualization
+# =============================================================================
+
+visualization:
+  top_genes: 50
+
+# =============================================================================
+# Functional enrichment
+# =============================================================================
+
+enrichment:
+  organism: "hsa"
+  id_type: "ENSEMBL"
+  show_categories: 15

@@ -1,0 +1,9 @@
+name: bulk-rnaseq-trimming
+
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - trim-galore
+  - cutadapt

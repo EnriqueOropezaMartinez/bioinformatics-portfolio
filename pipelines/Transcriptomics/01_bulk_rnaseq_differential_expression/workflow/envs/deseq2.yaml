@@ -1,0 +1,12 @@
+name: bulk-rnaseq-deseq2
+
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - r-base
+  - bioconductor-deseq2
+  - r-readr
+  - r-dplyr
+  - r-tibble

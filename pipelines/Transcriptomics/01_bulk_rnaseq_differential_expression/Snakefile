@@ -1,10 +1,59 @@
 ###############################################################################
-# RNA-seq Differential Expression Pipeline
-# Bioinformatics Portfolio
+# Bulk RNA-seq Differential Expression Pipeline
+# Author: Enrique Oropeza Martínez
 ###############################################################################
+
+import csv
 
 configfile: "config/config.yaml"
 
+with open(config["samples"], newline="") as sample_file:
+    sample_reader = csv.DictReader(sample_file)
+    SAMPLE_METADATA = list(sample_reader)
+
+SAMPLES = [row["sample"] for row in SAMPLE_METADATA]
+READS = ["R1", "R2"]
+
+
 rule all:
     input:
-        "results/pipeline_complete.txt"
+        "results/qc/raw/multiqc_report.html",
+        "results/qc/trimmed/multiqc_report.html",
+        expand(
+            "results/alignment/{sample}/{sample}.sorted.bam",
+            sample=SAMPLES
+        ),
+        expand(
+            "results/alignment/{sample}/{sample}.sorted.bam.bai",
+            sample=SAMPLES
+        ),
+        expand(
+            "results/alignment/{sample}/{sample}.flagstat.txt",
+            sample=SAMPLES
+        ),
+        "results/counts/gene_counts.txt",
+        "results/counts/gene_counts.txt.summary",
+        "results/differential_expression/deseq2_results.csv",
+        "results/differential_expression/normalized_counts.csv",
+        "results/differential_expression/vst_counts.csv",
+        "results/differential_expression/deseq2_summary.txt",
+        "results/figures/pca_plot.pdf",
+        "results/figures/volcano_plot.pdf",
+        "results/figures/top_genes_heatmap.pdf",
+        "results/figures/ma_plot.pdf",
+        "results/enrichment/go_upregulated.csv",
+        "results/enrichment/go_downregulated.csv",
+        "results/enrichment/kegg_differentially_expressed.csv",
+        "results/figures/go_upregulated_dotplot.pdf",
+        "results/figures/go_downregulated_dotplot.pdf",
+        "results/figures/kegg_dotplot.pdf",
+        "results/enrichment/enrichment_summary.txt"
+
+
+include: "workflow/rules/01_quality_control.smk"
+include: "workflow/rules/02_trimming.smk"
+include: "workflow/rules/03_alignment.smk"
+include: "workflow/rules/04_quantification.smk"
+include: "workflow/rules/05_differential_expression.smk"
+include: "workflow/rules/06_visualization.smk"
+include: "workflow/rules/07_functional_enrichment.smk"

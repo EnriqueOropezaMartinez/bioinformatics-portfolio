@@ -1,0 +1,15 @@
+name: bulk-rnaseq-visualization
+
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - r-base
+  - r-readr
+  - r-dplyr
+  - r-tibble
+  - r-ggplot2
+  - r-ggrepel
+  - r-pheatmap
+  - r-rcolorbrewer

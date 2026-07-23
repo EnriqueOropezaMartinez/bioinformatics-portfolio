@@ -1,0 +1,8 @@
+name: bulk-rnaseq-quantification
+
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - subread

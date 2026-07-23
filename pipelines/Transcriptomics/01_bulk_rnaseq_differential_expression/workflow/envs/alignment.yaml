@@ -1,0 +1,9 @@
+name: bulk-rnaseq-alignment
+
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - star
+  - samtools

@@ -1,0 +1,9 @@
+name: bulk-rnaseq-qc
+
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - fastqc
+  - multiqc

@@ -1,0 +1,14 @@
+name: bulk-rnaseq-enrichment
+
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - r-base
+  - bioconductor-clusterprofiler
+  - bioconductor-org.hs.eg.db
+  - bioconductor-enrichplot
+  - r-readr
+  - r-dplyr
+  - r-ggplot2
